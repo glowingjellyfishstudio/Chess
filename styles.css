@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 0;
+    border: 2px solid #333;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.white {
+    background-color: #eee;
+}
+
+.black {
+    background-color: #444;
+    color: #fff;
+}
+
+.square.selected {
+    border: 2px solid #f00;
+    box-sizing: border-box;
+}
+
+.square.valid {
+    border: 2px solid #0f0;
+    box-sizing: border-box;
+}
+
+.piece {
+    font-family: 'Chess', sans-serif; /* Use a chess font for better visuals */
+}
+
+/* Add Chess font */
+@font-face {
+    font-family: 'Chess';
+    src: url('path/to/chess-font.woff2') format('woff2'); /* Replace with the correct path to your font file */
+}
